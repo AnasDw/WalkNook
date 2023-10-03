@@ -1,0 +1,67 @@
+@import "./constants";
+
+.page {
+  background-color: $Major-color;
+  height: 67vw;
+  width: 100%;
+  overflow: hidden;
+}
+
+.Container {
+  @extend .flex;
+  @extend .img-responsive;
+  @extend .justify-content-center;
+
+  background-image: url("../assets/imgs/HomeYellowOrange.jpg");
+  width: 100%;
+  max-height: 50vw;
+  overflow: hidden;
+  position: relative;
+
+  .product-img {
+    @extend .img-responsive;
+
+    height: 67vw;
+    width: 100%;
+    background-image: url("../assets/imgs/nikeHomePage.png");
+  }
+
+  .product-description {
+    margin: 2vw 2vw 2vw 2vw;
+
+    h1 {
+      color: white;
+      font-size: 6vw;
+    }
+    h2 {
+      color: gold;
+      font-size: 2vw;
+    }
+    h3 {
+      color: rgb(99, 99, 99);
+      font-size: 1vw;
+    }
+
+    .product-user-description {
+      li {
+        @extend .flex;
+      }
+    }
+
+    .product-user-interface {
+      margin-top: 2vw;
+      ul {
+        @extend .flex;
+        gap: 2rem;
+      }
+      li {
+        @extend .flex;
+        justify-content: space-around;
+        border: 1px solid rgba(255, 183, 0, 0.873);
+        height: 3vw;
+        width: 6vw;
+        font-size: 1vw;
+      }
+    }
+  }
+}

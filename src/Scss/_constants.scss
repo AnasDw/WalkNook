@@ -1,0 +1,22 @@
+$Major-color: black;
+$Miner-color: rgb(222, 222, 222);
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+.col-direction {
+  flex-direction: column;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-space-between {
+  justify-content: space-between;
+}
+.img-responsive {
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 100%; 
+  height: auto;
+}
