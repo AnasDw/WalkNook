@@ -1,0 +1,81 @@
+.Products-Container {
+  height: 140vw;
+  margin: 14vw 8vw 0vw 8vw;
+  border-radius: 12px;
+
+  ul {
+    @extend .flex, .justify-content-space-between;
+    flex-wrap: wrap;
+    row-gap: 2vw;
+
+    li {
+      @extend .flex, .col-direction;
+
+      width: 25vw;
+      height: 28vw;
+      border-radius: 12px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      background-color: #f7fdfc;
+
+      .add2cart {
+        @extend .flex, .justify-content-space-between;
+        width: 20vw;
+        height: 3vw;
+        .add {
+          font-size: larger;
+          @extend .flex, .justify-content-center;
+          text-align: center;
+          color: gold;
+          width: 15vw;
+          height: 3vw;
+          border-radius: 12px;
+          background-color: black;
+          cursor: pointer;
+          &:hover {
+            transition: 0.9s;
+            background-color: gold;
+            color: $Major-color;
+          }
+        }
+      }
+      .img {
+        @extend .img-responsive;
+        width: 25vw;
+        height: 19vw;
+        border-radius: 12px;
+        background-image: url("../assets/imgs/Untitled-removebg-preview.png");
+      }
+      h2 {
+        margin-top: 1vw;
+        color: #636363;
+        font-size: 3vmin;
+      }
+      h3 {
+        font-size: 2vmin;
+      }
+
+      &:hover {
+        transition: 0.9s;
+        transform: translateY(-4px);
+      }
+    }
+  }
+}
+
+.header {
+  @extend .flex, .justify-content-space-between;
+  color: gold;
+  height: 5vw;
+  ul {
+    cursor: pointer;
+    height: 4vw;
+    @extend .flex, .justify-content-center;
+    width: 5vw;
+  }
+  .cc {
+    @extend .img-responsive;
+    background-color: gold;
+    height: 2vw;
+    width: 2vw;
+  }
+}

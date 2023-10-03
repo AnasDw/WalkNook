@@ -2,9 +2,17 @@
 
 .page {
   background-color: $Major-color;
-  height: 67vw;
+  // height: 67vw;
   width: 100%;
   overflow: hidden;
+
+  .border {
+    @extend .break;
+    margin: 12vw 2vw 2vw 2vw;
+    text-align: center;
+    color: $Miner-color;
+    font-size: 3vw;
+  }
 }
 
 .Container {
@@ -24,6 +32,7 @@
     height: 67vw;
     width: 100%;
     background-image: url("../assets/imgs/nikeHomePage.png");
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 9px;
   }
 
   .product-description {

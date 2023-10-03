@@ -1,7 +1,47 @@
+.logoName {
+  background-image: url("../assets/imgs/LogoName.png");
+  @extend .img-responsive;
+  width: 4vw;
+  height: 4vw;
+}
+.search_Icon {
+  background-image: url("../assets/imgs/search_Icon.png");
+}
+.cart_Icon {
+  background-image: url("../assets/imgs/cart_Icon.png");
+}
+.menu_Icon {
+  background-image: url("../assets/imgs/menu_Icon.png");
+}
 
-.nav{
-    position: fixed;
-    width: 100%;
-    height: 10vw;
-    background-color: $Major-color;
+.nav {
+  @extend .justify-content-space-between, .flex;
+
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 5vw;
+
+  .Icon {
+    @extend .img-responsive;
+    width: 2vw;
+    height: 2vw;
+  }
+
+  ul {
+    @extend .justify-content-space-between, .flex;
+    gap: 1vw;
+    margin: 1vw 1vw 1vw 1vw;
+
+    li {
+      @extend .flex;
+      width: 6vw;
+      height: 4vw;
+    }
+    a {
+      font-size: 1vw;
+      color: $Major-color;
+      text-decoration: none;
+    }
+  }
 }

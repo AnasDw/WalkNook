@@ -5,49 +5,48 @@ const NavBar = () => {
   return (
     <>
       <nav className="nav">
-        <ul>
-          <li>
-            <ul>
-              <li>
-                <Link to="/"> Home </Link>
-              </li>
-              <li>
-                <Link to="/"> Men </Link>
-              </li>
-              <li>
-                <Link to="/"> Women </Link>
-              </li>
-              <li>
-                <Link to="/"> Kids </Link>
-              </li>
-              <li>
-                <Link to="/"> Accessories </Link>
-              </li>
-            </ul>
-          </li>
+        <div>
+          <ul>
+            <li>
+              <Link to="/">
+                <div className="logoName"></div>
+              </Link>
+            </li>
+            <li>
+              <Link to="/"> Men </Link>
+            </li>
+            <li>
+              <Link to="/"> Women </Link>
+            </li>
+            <li>
+              <Link to="/"> Kids </Link>
+            </li>
+            <li>
+              <Link to="/"> Accessories </Link>
+            </li>
+          </ul>
+        </div>
 
-          <li>
-            <ul>
-              <li>
-                <Link to="/">
-                  <li className="search_Icon"></li>
-                  <li>Search</li>
-                </Link>
-              </li>
-              <li>
-                <Link to="/">
-                  <li className="cart_Icon"></li>
-                </Link>
-              </li>
-              <li>
-                <Link to="/">
-                  <li className="menu_Icon"></li>
-                </Link>
-              </li>
-              
-            </ul>
-          </li>
-        </ul>
+        <div>
+          <ul>
+            <li>
+              <Link className="flex" to="/">
+                <li className="Icon search_Icon"></li>
+                <li>Search</li>
+              </Link>
+            </li>
+            <li>
+              <Link to="/">
+                <div className="Icon cart_Icon"></div>
+              </Link>
+            </li>
+            <li>
+              <Link to="/">
+                <div className="Icon menu_Icon"></div>
+              </Link>
+            </li>
+          </ul>
+        </div>
       </nav>
     </>
   );
