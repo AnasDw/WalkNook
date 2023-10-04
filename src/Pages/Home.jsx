@@ -12,7 +12,7 @@ const Home = () => {
           <h1>Elevate your athletic journey</h1>
         </div>
 
-        <ProductsContainer />
+        <ProductsContainer category={"d"} />
       </div>
     </>
   );

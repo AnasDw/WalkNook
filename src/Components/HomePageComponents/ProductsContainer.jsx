@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../../Scss/index.scss";
 import Card from "../GlobalComponents/Card";
+import useAxios from "../../Data/AxiosByCategory";
 
-const ProductsContainer = () => {
-  let shoe_data = [];
+const ProductsContainer = ({ category }) => {
+  const [Shoe_data, setData] = useState([]);
+  const [todo, isError, isLoading] = useAxios(category);
+
+  useEffect(() => {
+    if (todo && todo.data) {
+      setData(todo.data);
+    }
+  }, [todo]);
+
   return (
     <>
       <div className="Products-Container">
         <div className="header">
-          <div> ★ We Found {shoe_data.length} Products </div>
+          <div> ★ We Found {Shoe_data.length} Products </div>
           <div>
             <ul>
               <div className="menu_Icon Icon cc"> </div>
@@ -18,11 +27,14 @@ const ProductsContainer = () => {
         </div>
 
         <ul>
-          {shoe_data.map((product) => (
-            <li>
-              <Card product={product} />
-            </li>
-          ))}
+          {
+            Shoe_data.map((product, index) => (
+                <li key={index}>
+                  <Card product={product} />
+                </li>
+
+              ))
+            }
         </ul>
       </div>
     </>

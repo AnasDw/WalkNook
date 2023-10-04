@@ -1,5 +1,5 @@
 .Products-Container {
-  height: 140vw;
+  // height: 140vw;
   margin: 14vw 8vw 0vw 8vw;
   border-radius: 12px;
 
@@ -7,7 +7,6 @@
     @extend .flex, .justify-content-space-between;
     flex-wrap: wrap;
     row-gap: 2vw;
-
     li {
       @extend .flex, .col-direction;
 
@@ -45,11 +44,18 @@
         border-radius: 12px;
         background-image: url("../assets/imgs/Untitled-removebg-preview.png");
       }
-      h2 {
+      .P-Name {
+        text-align: center;
         margin-top: 1vw;
-        color: #636363;
-        font-size: 3vmin;
+        width: 100%;
+        height: 2vw;
+        background-color: $Orange-color;
+        h2 {
+          color: #636363;
+          font-size: 1.5vmax;
+        }
       }
+
       h3 {
         font-size: 2vmin;
       }

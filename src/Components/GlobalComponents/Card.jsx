@@ -1,18 +1,17 @@
-import React from 'react'
+import React from "react";
 import "../../Scss/index.scss";
 
-
-const Card = (product) => {
+const Card = (object) => {
   return (
     <>
-      <h2>⋆ Nike Air Max 270 </h2>
+      <div className="P-Name"> <h2>⋆ {object.product.Name} </h2> </div>
       <div className="img"></div>
       <div className="add2cart">
         <div className="add"> Add to cart ⊕ </div>
-        <div className="price"> ₪649</div>
+        <div className="price"> ₪{object.product.Price}</div>
       </div>
     </>
   );
-}
+};
 
-export default Card
+export default Card;
