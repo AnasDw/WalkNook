@@ -12,7 +12,9 @@ const Category = () => {
 
   return (
     <>
-      <div>{<ProductsContainer category={Category} />}</div>
+      <div className="Category-Page">
+        <div>{<ProductsContainer category={Category} />}</div>
+      </div>
     </>
   );
 };
