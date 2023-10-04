@@ -3,9 +3,9 @@ import "../../Scss/index.scss";
 import Card from "../GlobalComponents/Card";
 import useAxios from "../../Data/AxiosByCategory";
 
-const ProductsContainer = ({ category }) => {
+const ProductsContainer = (category) => {
   const [Shoe_data, setData] = useState([]);
-  const [todo, isError, isLoading] = useAxios(category);
+  const [todo, isError, isLoading] = useAxios(category.category);
 
   useEffect(() => {
     if (todo && todo.data) {
@@ -27,14 +27,11 @@ const ProductsContainer = ({ category }) => {
         </div>
 
         <ul>
-          {
-            Shoe_data.map((product, index) => (
-                <li key={index}>
-                  <Card product={product} />
-                </li>
-
-              ))
-            }
+          {Shoe_data.map((product, index) => (
+            <li key={index}>
+              <Card product={product} />
+            </li>
+          ))}
         </ul>
       </div>
     </>

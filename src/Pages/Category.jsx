@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { ProductsContainer } from "../Components";
 
 const Category = () => {
-  return (
-    <div>Category</div>
-  )
-}
+  const param1 = useParams();
+  const [Category, setCategory] = useState();
 
-export default Category
+  useEffect(() => {
+    setCategory(param1.param1.slice(1));
+  }, [param1]);
+
+  return (
+    <>
+      <div>{<ProductsContainer category={Category} />}</div>
+    </>
+  );
+};
+
+export default Category;

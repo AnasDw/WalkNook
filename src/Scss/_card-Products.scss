@@ -1,6 +1,6 @@
 .Products-Container {
   // height: 140vw;
-  margin: 14vw 8vw 0vw 8vw;
+  margin: 14vw 8vw 2vw 8vw;
   border-radius: 12px;
 
   ul {
@@ -21,7 +21,7 @@
         width: 20vw;
         height: 3vw;
         .add {
-          font-size: larger;
+          font-size: 1.5vmax;
           @extend .flex, .justify-content-center;
           text-align: center;
           color: gold;
