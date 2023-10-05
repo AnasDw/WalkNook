@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import "../../Scss/index.scss";
 
 const NavBar = () => {
@@ -13,16 +13,13 @@ const NavBar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/category/:men/"> Men </Link>
+              <Link to="/category/men"> Men </Link>
             </li>
             <li>
-              <Link to="/category/:women/"> Women </Link>
+              <Link to="/category/women"> Women </Link>
             </li>
             <li>
-              <Link to="/category/:kids/"> Kids </Link>
-            </li>
-            <li>
-              <Link to="/category/:accessories/"> Accessories </Link>
+              <Link to="/category/kids"> Kids </Link>
             </li>
           </ul>
         </div>

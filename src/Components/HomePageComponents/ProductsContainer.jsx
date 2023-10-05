@@ -7,11 +7,12 @@ const ProductsContainer = (category) => {
   const [Shoe_data, setData] = useState([]);
   const [todo, isError, isLoading] = useAxios(category.category);
 
+
   useEffect(() => {
     if (todo && todo.data) {
       setData(todo.data);
     }
-  }, [todo]);
+  }, [todo, category]);
 
   return (
     <>

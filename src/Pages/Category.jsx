@@ -4,16 +4,13 @@ import { ProductsContainer } from "../Components";
 
 const Category = () => {
   const param1 = useParams();
-  const [Category, setCategory] = useState();
-
-  useEffect(() => {
-    setCategory(param1.param1.slice(1));
-  }, [param1]);
 
   return (
     <>
       <div className="Category-Page">
-        <div>{<ProductsContainer category={Category} />}</div>
+        <div>
+          { <ProductsContainer category={param1.param1} /> }
+        </div>
       </div>
     </>
   );
