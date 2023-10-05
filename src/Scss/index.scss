@@ -3,11 +3,12 @@
 @import "./fonts";
 @import "./navbar";
 @import "./card-Products";
+@import "./_Departments/menDepartment";
+@import "./_Departments/womenDepartment";
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "WalkNook",sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "WalkNook", sans-serif;
 }
-
