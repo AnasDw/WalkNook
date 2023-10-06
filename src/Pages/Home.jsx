@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../Scss/index.scss";
 import { NewCollection, ProductsContainer } from "../Components";
 
 const Home = () => {
+  useEffect(() => {
+    
+    if (localStorage.getItem("IsRegistered")) {
+    } else {
+      localStorage.clear();
+      localStorage.setItem("IsRegistered", false);
+    }
+  }, []);
+
   return (
     <>
       <div className="page">

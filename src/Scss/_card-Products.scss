@@ -85,3 +85,28 @@
     width: 2vw;
   }
 }
+
+.Edit-Card {
+  width: 100%;
+  form {
+    margin: 1vw 1vw 1vw 1vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2vw;
+    height: 28vw;
+    label {
+      input {
+        text-align: center;
+      }
+      text-align: center;
+      text-overflow: ellipsis;
+      height: 2vw;
+    }
+    button {
+      background-color: gold;
+      width: 4vw;
+      border-radius: 12px;
+    }
+  }
+}

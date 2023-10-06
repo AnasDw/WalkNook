@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../../Scss/index.scss";
-import Card from "../GlobalComponents/Card";
+import Card from "../CardComponents/Card/"
 import useAxios from "../../Data/AxiosByCategory";
 
 const ProductsContainer = (category) => {

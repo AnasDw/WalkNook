@@ -9,7 +9,9 @@ const Category = () => {
   return (
     <>
       <div className="Category-Page">
-        <div className={`${param1.param1} shared-container `}> </div>
+        <div className={`${param1.param1} shared-container `}>
+          <div className="Category-Tittle"> {`${param1.param1} Department`}</div>
+        </div>
         <div>{<ProductsContainer category={param1.param1} />}</div>
       </div>
     </>

@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const useAxios = (category) => {
-  let Api = ``;
+  let Api = `https://65204129906e276284c44274.mockapi.io/Example`;
 
   // if (category === "d" || category === "men") {
   //   Api = `https://651e67ea44a3a8aa4768483d.mockapi.io/WalkNook`;
   // } else if (category === "women") {
   //   Api = `https://651e6a7e44a3a8aa47684cd7.mockapi.io/WalkNookWomen`;
-  // } else if (category === "kids") {
+  //  if (category === "kids") {
   //   Api = `https://651e74b244a3a8aa476866b3.mockapi.io/WalkNookkids`;
   // }
   const [res, setRes] = useState("");
