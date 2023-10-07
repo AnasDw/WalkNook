@@ -1,11 +1,12 @@
 import { useState } from "react";
+import { UpdateData } from "../../Data/AxiosByCategory";
 
 const EditComponent = (object) => {
   const [Price, setPrice] = useState(object.object.product.Price);
   const [ProductName, setProductName] = useState(object.object.product.Name);
   const [QNT, setQNT] = useState(object.object.product.QNT);
 
-  function update(state,value) {
+  function update(state, value) {
     switch (state) {
       case "ProductName":
         setProductName(value);
@@ -18,7 +19,7 @@ const EditComponent = (object) => {
         break;
     }
   }
-  
+
   const elements = [
     { key: "ProductName", value: ProductName },
     { key: "Price", value: Price },
@@ -26,6 +27,15 @@ const EditComponent = (object) => {
   ];
 
   function handleSubmit(e) {
+    e.preventDefault();
+    const newData = {
+      id: object.object.product.id,
+      QNT: QNT,
+      Name: ProductName,
+      Price: Price,
+      Description: object.object.product.Description,
+    };
+    UpdateData("d", newData);
   }
   return (
     <>
@@ -39,7 +49,7 @@ const EditComponent = (object) => {
                 type="text"
                 value={element.value}
                 onChange={(e) => {
-                    update(element.key , e.target.value);
+                  update(element.key, e.target.value);
                 }}
               />
             </div>

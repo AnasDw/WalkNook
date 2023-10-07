@@ -1,41 +1,5 @@
-.logoName {
-  background-image: url("../assets/imgs/LogoName.png");
-  @extend .img-responsive;
-  width: 4vw;
-  height: 4vw;
-}
-.search_Icon {
-  background-image: url("../assets/imgs/search_Icon.png");
-}
-.cart_Icon {
-  background-image: url("../assets/imgs/cart_Icon.png");
-}
-.menu_Icon {
-  background-image: url("../assets/imgs/menu_Icon.png");
-}
-.settings_Icon {
-  border-radius: 10%;
-  background-image: url("../assets/imgs/settings_Icon.png");
-  width: 2vw;
-  height: 2vw;
-  @extend .img-responsive;
-  &:hover{
-    transition: 0.9s;
-    background-color: #00a4bd;
-  }
-}
-.user_Icon {
-  background-image: url("../assets/imgs/user.png");
-}
-.ListDown_Icon {
-  background-image: url("../assets/imgs/Listdown.png");
-  width: 1vw !important;
-  height: 1vw !important;
-}
-
 .nav {
   @extend .justify-content-space-between, .flex;
-
   position: fixed;
   z-index: 1;
   width: 100%;
